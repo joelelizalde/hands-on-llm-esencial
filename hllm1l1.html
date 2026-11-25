@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lenguaje convertido en vectores · LLM en la práctica</title>
+<meta name="description" content="Un modelo de lenguaje no ve letras ni palabras: ve números. La historia de la IA del lenguaje es, en buena medida, la historia de cómo representar el texto…">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/curso.css">
+<script>(function(){try{var t=localStorage.getItem('hllm_theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+</head>
+<body class="is-lesson">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<aside class="sidebar" id="sidebar" aria-label="Temario del curso">
+<a class="brand" href="index.html">
+  <span class="brand-mark">HLLM</span>
+  <span class="brand-text"><strong>LLM en la práctica</strong><span>Edición esencial</span></span>
+</a>
+<div class="side-progress"><div class="side-progress-top"><svg class="ring" viewBox="0 0 46 46" aria-hidden="true"><circle class="ring-bg" cx="23" cy="23" r="18"></circle><circle class="ring-fg" data-ring cx="23" cy="23" r="18"></circle></svg><div class="side-progress-text"><strong><span data-done-count>0</span> de 28 pasos</strong><span>Tu avance</span></div></div></div>
+<nav class="side-nav"><div class="nav-label">Temario · 7 módulos</div>
+<details class="mod" data-module="01" open data-current="true">
+<summary>
+  <span class="mod-num">01</span>
+  <span class="mod-name">Del texto al modelo</span>
+  <span class="mod-count" data-modcount="01">0/4</span>
+  <span class="mod-bar" aria-hidden="true"><i data-modbar="01"></i></span>
+</summary>
+<ol class="lessons">
+<li><a class="lesson-link is-current" data-lesson="hllm1l1" href="hllm1l1.html" aria-current="page"><span class="ln">01.1</span><span class="lt">Lenguaje convertido en vectores</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm1l2" href="hllm1l2.html"><span class="ln">01.2</span><span class="lt">Atención: el mecanismo que cambió todo</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm1l3" href="hllm1l3.html"><span class="ln">01.3</span><span class="lt">Cómo se entrena y se usa un LLM</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link quiz" data-lesson="hllm1q" href="hllm1q.html"><span class="ln">01.4</span><span class="lt">Cierre del módulo 01</span><span class="dot" aria-hidden="true"></span></a></li>
+</ol></details>
+<details class="mod" data-module="02">
+<summary>
+  <span class="mod-num">02</span>
+  <span class="mod-name">Tokens y embeddings</span>
+  <span class="mod-count" data-modcount="02">0/4</span>
+  <span class="mod-bar" aria-hidden="true"><i data-modbar="02"></i></span>
+</summary>
+<ol class="lessons">
+<li><a class="lesson-link" data-lesson="hllm2l1" href="hllm2l1.html"><span class="ln">02.1</span><span class="lt">Tokenización en la práctica</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm2l2" href="hllm2l2.html"><span class="ln">02.2</span><span class="lt">Embeddings de tokens y contexto</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm2l3" href="hllm2l3.html"><span class="ln">02.3</span><span class="lt">Embeddings de texto y recomendación</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link quiz" data-lesson="hllm2q" href="hllm2q.html"><span class="ln">02.4</span><span class="lt">Cierre del módulo 02</span><span class="dot" aria-hidden="true"></span></a></li>
+</ol></details>
+<details class="mod" data-module="03">
+<summary>
+  <span class="mod-num">03</span>
+  <span class="mod-name">Dentro del Transformer</span>
+  <span class="mod-count" data-modcount="03">0/4</span>
+  <span class="mod-bar" aria-hidden="true"><i data-modbar="03"></i></span>
+</summary>
+<ol class="lessons">
+<li><a class="lesson-link" data-lesson="hllm3l1" href="hllm3l1.html"><span class="ln">03.1</span><span class="lt">El recorrido de una predicción</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm3l2" href="hllm3l2.html"><span class="ln">03.2</span><span class="lt">Decodificar y recordar</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm3l3" href="hllm3l3.html"><span class="ln">03.3</span><span class="lt">Mejoras modernas de arquitectura</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link quiz" data-lesson="hllm3q" href="hllm3q.html"><span class="ln">03.4</span><span class="lt">Cierre del módulo 03</span><span class="dot" aria-hidden="true"></span></a></li>
+</ol></details>
+<details class="mod" data-module="04">
+<summary>
+  <span class="mod-num">04</span>
+  <span class="mod-name">Clasificar y agrupar texto</span>
+  <span class="mod-count" data-modcount="04">0/4</span>
+  <span class="mod-bar" aria-hidden="true"><i data-modbar="04"></i></span>
+</summary>
+<ol class="lessons">
+<li><a class="lesson-link" data-lesson="hllm4l1" href="hllm4l1.html"><span class="ln">04.1</span><span class="lt">Clasificación con modelos de representación</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm4l2" href="hllm4l2.html"><span class="ln">04.2</span><span class="lt">Clasificación con modelos generativos</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm4l3" href="hllm4l3.html"><span class="ln">04.3</span><span class="lt">Clustering y modelado de temas</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link quiz" data-lesson="hllm4q" href="hllm4q.html"><span class="ln">04.4</span><span class="lt">Cierre del módulo 04</span><span class="dot" aria-hidden="true"></span></a></li>
+</ol></details>
+<details class="mod" data-module="05">
+<summary>
+  <span class="mod-num">05</span>
+  <span class="mod-name">Prompt engineering</span>
+  <span class="mod-count" data-modcount="05">0/4</span>
+  <span class="mod-bar" aria-hidden="true"><i data-modbar="05"></i></span>
+</summary>
+<ol class="lessons">
+<li><a class="lesson-link" data-lesson="hllm5l1" href="hllm5l1.html"><span class="ln">05.1</span><span class="lt">Los ingredientes de un buen prompt</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm5l2" href="hllm5l2.html"><span class="ln">05.2</span><span class="lt">Aprender del contexto</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm5l3" href="hllm5l3.html"><span class="ln">05.3</span><span class="lt">Razonar y verificar</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link quiz" data-lesson="hllm5q" href="hllm5q.html"><span class="ln">05.4</span><span class="lt">Cierre del módulo 05</span><span class="dot" aria-hidden="true"></span></a></li>
+</ol></details>
+<details class="mod" data-module="06">
+<summary>
+  <span class="mod-num">06</span>
+  <span class="mod-name">Búsqueda semántica y RAG</span>
+  <span class="mod-count" data-modcount="06">0/4</span>
+  <span class="mod-bar" aria-hidden="true"><i data-modbar="06"></i></span>
+</summary>
+<ol class="lessons">
+<li><a class="lesson-link" data-lesson="hllm6l1" href="hllm6l1.html"><span class="ln">06.1</span><span class="lt">Búsqueda semántica</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm6l2" href="hllm6l2.html"><span class="ln">06.2</span><span class="lt">RAG de principio a fin</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm6l3" href="hllm6l3.html"><span class="ln">06.3</span><span class="lt">RAG avanzado y evaluación</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link quiz" data-lesson="hllm6q" href="hllm6q.html"><span class="ln">06.4</span><span class="lt">Cierre del módulo 06</span><span class="dot" aria-hidden="true"></span></a></li>
+</ol></details>
+<details class="mod" data-module="07">
+<summary>
+  <span class="mod-num">07</span>
+  <span class="mod-name">Adaptar y ampliar el modelo</span>
+  <span class="mod-count" data-modcount="07">0/4</span>
+  <span class="mod-bar" aria-hidden="true"><i data-modbar="07"></i></span>
+</summary>
+<ol class="lessons">
+<li><a class="lesson-link" data-lesson="hllm7l1" href="hllm7l1.html"><span class="ln">07.1</span><span class="lt">Fine-tuning de modelos de representación</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm7l2" href="hllm7l2.html"><span class="ln">07.2</span><span class="lt">Fine-tuning generativo y eficiente</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link" data-lesson="hllm7l3" href="hllm7l3.html"><span class="ln">07.3</span><span class="lt">Multimodalidad y sistemas en producción</span><span class="dot" aria-hidden="true"></span></a></li>
+<li><a class="lesson-link quiz" data-lesson="hllm7q" href="hllm7q.html"><span class="ln">07.4</span><span class="lt">Cierre del módulo 07</span><span class="dot" aria-hidden="true"></span></a></li>
+</ol></details>
+</nav>
+<div class="side-foot"><a href="glosario.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5Z"></path><path d="M4 5.5v16"></path></svg> Glosario</a><a href="progreso.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path></svg> Mi progreso</a><a href="Hands-On-LLM-Esencial.pdf"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"></path></svg> Manual en PDF</a><div class="edition">HLLM · 2026</div></div>
+</aside>
+<div class="overlay" data-overlay></div><main class="main" id="contenido">
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="Abrir el temario" aria-controls="sidebar" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+  <nav class="crumbs" aria-label="Migas de pan"><a href="index.html">Curso</a><span class="sep">/</span><span>Módulo 01</span><span class="sep">/</span><strong>Lenguaje convertido en vectores</strong></nav>
+  <div class="top-actions">
+    <button class="search-btn" type="button" data-search-open aria-label="Buscar en el curso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button>
+    <button class="icon-btn" type="button" data-theme-toggle aria-label="Cambiar tema"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"></path></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></button>
+  </div>
+  <div class="readbar" data-readbar></div>
+</header>
+<div class="lesson-wrap">
+  <article class="lesson">
+    <header>
+  <div class="kicker">Módulo 01 · Lección 1 de 3</div>
+  <h1>Lenguaje convertido en vectores</h1>
+  <div class="lesson-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 1.8"></path></svg> 9 min de lectura</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5Z"></path><path d="M4 5.5v16M8 7h8M8 11h6"></path></svg> 683 palabras</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="4" y="4" width="6" height="6" rx="1"></rect><rect x="14" y="4" width="6" height="6" rx="1"></rect><rect x="4" y="14" width="6" height="6" rx="1"></rect><rect x="14" y="14" width="6" height="6" rx="1"></rect></svg> 3 apartados</span></div>
+</header>
+    <div class="brief">
+  <div class="brief-k">En esta lección</div>
+  <div><ul><li>Bag-of-words cuenta términos y pierde orden, sinónimos y contexto</li><li>Un embedding es un vector denso donde la cercanía expresa similitud</li><li>Los vectores pueden representar tokens, frases, documentos o productos</li><li>La contextualización distingue significados según la frase</li></ul><p>Lee de principio a fin; al terminar, el botón inferior te lleva directo a la siguiente lección.</p></div>
+</div>
+<div class="prose">
+<p class="lead">Un modelo de lenguaje no ve letras ni palabras: ve números. La historia de la IA del lenguaje es, en buena medida, la historia de cómo representar el texto para que las operaciones matemáticas capturen significado. Pasar de contar palabras a aprender vectores densos fue el primer salto que hizo posibles los modelos actuales.</p>
+<figure class="diagram"><svg viewBox="0 0 840 170" role="img" aria-label="Diagrama de capas: Texto → Bag-of-words → Embeddings densos → Contexto"><rect x="220" y="23.0" width="400" height="25" rx="7" fill="#FFFDF7" stroke="#C8BBA3" stroke-width="1.2"/><rect x="220" y="23.0" width="4" height="25" rx="2" fill="#C8BBA3"/><text x="420" y="40.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#18140F" text-anchor="middle">Texto</text><rect x="220" y="56.0" width="400" height="25" rx="7" fill="#FFFDF7" stroke="#C8BBA3" stroke-width="1.2"/><rect x="220" y="56.0" width="4" height="25" rx="2" fill="#C8BBA3"/><text x="420" y="73.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#18140F" text-anchor="middle">Bag-of-words</text><rect x="220" y="89.0" width="400" height="25" rx="7" fill="#FFFDF7" stroke="#C8BBA3" stroke-width="1.2"/><rect x="220" y="89.0" width="4" height="25" rx="2" fill="#C8BBA3"/><text x="420" y="106.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#18140F" text-anchor="middle">Embeddings densos</text><rect x="220" y="122.0" width="400" height="25" rx="7" fill="#FFFDF7" stroke="#C9481B" stroke-width="1.8"/><rect x="220" y="122.0" width="4" height="25" rx="2" fill="#C9481B"/><text x="420" y="139.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#18140F" text-anchor="middle">Contexto</text></svg><figcaption>Cada nivel añade información: del recuento de palabras se pasa a vectores aprendidos y, después, a representaciones que dependen del contexto.</figcaption></figure>
+<h2 id="contar-palabras-tiene-un-techo">Contar palabras tiene un techo</h2>
+<p>La forma más antigua de representar un texto es contar sus palabras. El resultado, llamado bag-of-words, es un vector enorme donde cada posición corresponde a un término del vocabulario y el valor es su frecuencia. Es simple, rápido y todavía útil para líneas base, pero destruye el orden: «el perro muerde al hombre» y «el hombre muerde al perro» producen el mismo vector.</p>
+<p>El recuento tampoco entiende sinónimos. «Coche» y «automóvil» ocupan dimensiones distintas aunque signifiquen casi lo mismo, mientras que «banco» de sentarse y «banco» de dinero comparten una sola posición. El modelo ve coincidencias superficiales, no relaciones de significado, y necesita muchísimos ejemplos para compensar esa ceguera.</p>
+<p>A esto se suma la dispersión. Un vocabulario de cien mil palabras genera vectores de cien mil dimensiones en los que casi todo son ceros. Comparar dos documentos se vuelve costoso y estadísticamente frágil: la mayoría de las dimensiones no aporta señal. La representación dispersa funciona como índice, no como comprensión.</p>
+<h2 id="vectores-densos-y-aprendidos">Vectores densos y aprendidos</h2>
+<p>Un embedding es un vector relativamente corto, de cientos o miles de dimensiones, en el que cada número se aprende a partir de datos. En lugar de reservar una dimensión por palabra, el entrenamiento coloca palabras con usos parecidos en regiones cercanas del espacio. La geometría del vector pasa a codificar similitud.</p>
+<p>Esa propiedad es la que hace útiles a los embeddings. Si «factura» y «recibo» están cerca, un buscador puede encontrar un documento aunque no comparta la palabra exacta. Si «Madrid» está cerca de «España» y lejos de «ensalada», el modelo captura parte de la estructura del mundo sin que nadie le haya dado una definición explícita.</p>
+<p>Los vectores pueden representar unidades muy distintas: tokens, palabras, frases, documentos, imágenes o productos. La idea común es siempre la misma: convertir un objeto en una posición dentro de un espacio donde la distancia aproxima la relación semántica. Esa abstracción sirve para buscar, clasificar, recomendar y alimentar la memoria de un modelo generativo.</p>
+<h2 id="del-simbolo-a-la-red-neuronal">Del símbolo a la red neuronal</h2>
+<p>Los primeros sistemas de lenguaje se construían con reglas gramaticales y diccionarios. Funcionaban en dominios estrechos y se rompían ante la ambigüedad. Después llegaron los modelos estadísticos, que estimaban la probabilidad de una palabra dado su contexto; mejoraron la cobertura, pero seguían tratando cada palabra como un símbolo aislado.</p>
+<p>El cambio decisivo fue aprender representaciones con redes neuronales. word2vec popularizó la idea de que una palabra se define por las que la acompañan: si dos términos aparecen en contextos similares, sus vectores deben parecerse. Otros métodos, como GloVe o los modelos de lenguaje neuronales, ampliaron esa intuición y demostraron que la geometría aprendida generaliza.</p>
+<p>La atención y el Transformer dieron el paso siguiente: representaciones que cambian según la frase completa. Ya no basta con saber que «banco» es una palabra polisémica; el vector de «banco» en «me senté en el banco» debe diferir del de «fui al banco a pagar». Esa contextualización es la base de los modelos que se estudian en los próximos módulos.</p>
+<aside class="lesson-extra keypoints"><h2 id="ideas-clave">Ideas clave</h2><ul><li>Usa bag-of-words como línea base, no como solución semántica.</li><li>Piensa en embeddings como coordenadas de significado, no como tablas.</li><li>Comprueba la calidad de un embedding con tareas reales de tu dominio.</li><li>Distingue representación de palabra de representación contextual.</li><li>Recuerda que la geometría aprendida hereda sesgos de los datos.</li></ul></aside>
+<aside class="lesson-extra example"><h2 id="caso">Caso concreto</h2><p>Un equipo de soporte quiere encontrar tickets parecidos. Con bag-of-words, «no puedo entrar en mi cuenta» y «la sesión no me deja acceder» apenas se relacionan. Al convertir cada ticket en un embedding de frase, ambos caen cerca y el sistema recupera casos resueltos con el mismo problema aunque el vocabulario sea distinto.</p></aside>
+<aside class="lesson-extra caution"><h2 id="cuidado">Cuidado</h2><p>Un embedding no es una definición objetiva: refleja los datos con los que se entrenó. Si el corpus asocia ciertos trabajos o países con atributos negativos, el buscador reproducirá esa asociación aunque nadie la haya programado.</p></aside>
+</div>
+    <section class="finish">
+  <div class="eyebrow">Siguiente lección</div>
+  <h2>Atención: el mecanismo que cambió todo</h2>
+  <p>Continúa la lectura sin volver al índice. También puedes usar la flecha → del teclado.</p>
+  <div class="finish-actions">
+    <a class="btn btn-cream" href="hllm1l2.html" data-complete-link="hllm1l1">Completar y seguir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    <a class="quiet" href="hllm1l2.html">Saltar sin completar</a>
+  </div>
+  
+</section>
+  </article>
+<aside class="toc" aria-label="En esta página"><div class="toc-label">En esta página</div><a href="#contar-palabras-tiene-un-techo">Contar palabras tiene un techo</a><a href="#vectores-densos-y-aprendidos">Vectores densos y aprendidos</a><a href="#del-simbolo-a-la-red-neuronal">Del símbolo a la red neuronal</a><a href="#ideas-clave">Ideas clave</a><a href="#caso">Caso concreto</a><a href="#cuidado">Cuidado</a></aside>
+</div>
+</main>
+<nav class="dock" aria-label="Navegación entre lecciones">
+  <span class="dock-btn" aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg></span>
+  <div class="dock-mid"><span>Paso 1 / 28</span><i><b data-dockbar></b></i></div>
+  <a class="dock-next" href="hllm1l2.html" title="Siguiente (→)">Siguiente <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</nav>
+<div class="searchbox" data-search role="dialog" aria-modal="true" aria-label="Buscar en el curso">
+  <div class="search-panel">
+    <div class="search-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg><input class="search-input" type="search" placeholder="Busca una lección o un tema…" aria-label="Buscar una lección o un tema" autocomplete="off"><button class="search-close" type="button" data-search-close>ESC</button></div>
+    <div class="search-results"></div>
+    <div class="sr-hint"><span>↑ ↓ para navegar · Enter para abrir</span><span>Esc para cerrar</span></div>
+  </div>
+</div>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script>window.HLLM={"total":28,"current":"hllm1l1","next":{"title":"Atención: el mecanismo que cambió todo","href":"hllm1l2.html"},"prev":null,"modules":[{"num":"01","title":"Del texto al modelo","lessons":[{"id":"hllm1l1","num":1,"lnum":1,"title":"Lenguaje convertido en vectores","href":"hllm1l1.html","kind":"lesson","search":"representación texto bag-of-words embeddings densos similitud semántica word2vec tokens frases documentos contexto historia IA lenguaje vectores"},{"id":"hllm1l2","num":2,"lnum":2,"title":"Atención: el mecanismo que cambió todo","href":"hllm1l2.html","kind":"lesson","search":"atención transformer auto-atención consulta clave valor softmax multi-cabeza encoder decoder máscara causal BERT GPT T5 contexto"},{"id":"hllm1l3","num":3,"lnum":3,"title":"Cómo se entrena y se usa un LLM","href":"hllm1l3.html","kind":"lesson","search":"entrenamiento LLM preentrenamiento ajuste supervisado SFT preferencias RLHF DPO modelo base parámetros escala modelos abiertos API responsabilidad evaluación"},{"id":"hllm1q","num":4,"lnum":4,"title":"Cierre del módulo 01","href":"hllm1q.html","kind":"quiz","search":"cierre representación embeddings atención transformer familias de modelos entrenamiento preentrenamiento SFT preferencias modelos abiertos evaluación"}]},{"num":"02","title":"Tokens y embeddings","lessons":[{"id":"hllm2l1","num":1,"lnum":1,"title":"Tokenización en la práctica","href":"hllm2l1.html","kind":"lesson","search":"tokenización tokenizador tokens subpalabras BPE byte-level vocabulario identificadores fertilidad contexto coste multilingüe números emojis"},{"id":"hllm2l2","num":2,"lnum":2,"title":"Embeddings de tokens y contexto","href":"hllm2l2.html","kind":"lesson","search":"embeddings tokens matriz contextual posición similitud coseno estados ocultos capas dimensionalidad representación semántica normalización"},{"id":"hllm2l3","num":3,"lnum":3,"title":"Embeddings de texto y recomendación","href":"hllm2l3.html","kind":"lesson","search":"embeddings de frase documentos word2vec skip-gram muestreo negativo contrastivo recomendación dos torres similitud ranking sesgo popularidad"},{"id":"hllm2q","num":4,"lnum":4,"title":"Cierre del módulo 02","href":"hllm2q.html","kind":"quiz","search":"cierre tokens tokenización BPE embeddings contextuales frase word2vec contrastivo recomendación similitud ranking sesgo"}]},{"num":"03","title":"Dentro del Transformer","lessons":[{"id":"hllm3l1","num":1,"lnum":1,"title":"El recorrido de una predicción","href":"hllm3l1.html","kind":"lesson","search":"forward pass transformer bloques logits softmax muestreo prefill decode latencia tokens por segundo GPU inferencia vocabulario"},{"id":"hllm3l2","num":2,"lnum":2,"title":"Decodificar y recordar","href":"hllm3l2.html","kind":"lesson","search":"decodificación greedy muestreo temperatura top-k top-p beam search contexto ventana KV cache perplejidad memoria latencia repetición"},{"id":"hllm3l3","num":3,"lnum":3,"title":"Mejoras modernas de arquitectura","href":"hllm3l3.html","kind":"lesson","search":"arquitectura transformer atención eficiente MQA GQA FlashAttention ventana deslizante RMSNorm SwiGLU RoPE mezcla de expertos MoE contexto largo"},{"id":"hllm3q","num":4,"lnum":4,"title":"Cierre del módulo 03","href":"hllm3q.html","kind":"quiz","search":"cierre transformer logits softmax decodificación temperatura top-p contexto KV cache GQA FlashAttention RoPE MoE"}]},{"num":"04","title":"Clasificar y agrupar texto","lessons":[{"id":"hllm4l1","num":1,"lnum":1,"title":"Clasificación con modelos de representación","href":"hllm4l1.html","kind":"lesson","search":"clasificación texto modelos de representación encoder embeddings regresión logística zero-shot etiquetas desequilibrio F1 matriz confusión calibración deriva"},{"id":"hllm4l2","num":2,"lnum":2,"title":"Clasificación con modelos generativos","href":"hllm4l2.html","kind":"lesson","search":"clasificación generativa texto a texto T5 prompt etiquetas few-shot formato validación abstención coste latencia evaluación híbrido"},{"id":"hllm4l3","num":3,"lnum":3,"title":"Clustering y modelado de temas","href":"hllm4l3.html","kind":"lesson","search":"clustering texto topic modeling BERTopic embeddings UMAP HDBSCAN c-TF-IDF coherencia outliers evaluación temas documentos"},{"id":"hllm4q","num":4,"lnum":4,"title":"Cierre del módulo 04","href":"hllm4q.html","kind":"quiz","search":"cierre clasificación embeddings zero-shot etiquetas desequilibrio F1 clasificación generativa BERTopic UMAP HDBSCAN temas"}]},{"num":"05","title":"Prompt engineering","lessons":[{"id":"hllm5l1","num":1,"lnum":1,"title":"Los ingredientes de un buen prompt","href":"hllm5l1.html","kind":"lesson","search":"prompt engineering ingredientes rol tarea contexto restricciones formato control salida JSON delimitadores versionado evaluación inyección"},{"id":"hllm5l2","num":2,"lnum":2,"title":"Aprender del contexto","href":"hllm5l2.html","kind":"lesson","search":"few-shot zero-shot one-shot ejemplos en contexto orden etiquetas cadena de prompts descomposición historial memoria abstención seguridad"},{"id":"hllm5l3","num":3,"lnum":3,"title":"Razonar y verificar","href":"hllm5l3.html","kind":"lesson","search":"razonamiento cadena de pensamiento chain of thought self-consistency árbol de pensamiento tree of thought ReAct herramientas verificación gramáticas JSON pruebas"},{"id":"hllm5q","num":4,"lnum":4,"title":"Cierre del módulo 05","href":"hllm5q.html","kind":"quiz","search":"cierre prompt engineering formato few-shot cadena de prompts razonamiento self-consistency ReAct verificación esquemas evaluación"}]},{"num":"06","title":"Búsqueda semántica y RAG","lessons":[{"id":"hllm6l1","num":1,"lnum":1,"title":"Búsqueda semántica","href":"hllm6l1.html","kind":"lesson","search":"búsqueda semántica dense retrieval embeddings índice vectorial HNSW IVF BM25 híbrida reranking cross-encoder recall nDCG evaluación"},{"id":"hllm6l2","num":2,"lnum":2,"title":"RAG de principio a fin","href":"hllm6l2.html","kind":"lesson","search":"RAG retrieval augmented generation pipeline ingestión chunking metadatos índice recuperación prompt citas fidelidad evaluación alucinación"},{"id":"hllm6l3","num":3,"lnum":3,"title":"RAG avanzado y evaluación","href":"hllm6l3.html","kind":"lesson","search":"RAG avanzado reescritura de consulta HyDE multi-query enrutamiento híbrida reranking compresión GraphRAG evaluación fidelidad RAGAS fallos"},{"id":"hllm6q","num":4,"lnum":4,"title":"Cierre del módulo 06","href":"hllm6q.html","kind":"quiz","search":"cierre búsqueda semántica híbrida chunking RAG reranking citas fidelidad evaluación reescritura GraphRAG fallos"}]},{"num":"07","title":"Adaptar y ampliar el modelo","lessons":[{"id":"hllm7l1","num":1,"lnum":1,"title":"Fine-tuning de modelos de representación","href":"hllm7l1.html","kind":"lesson","search":"fine-tuning encoder BERT clasificación cabeza congelar capas SetFit few-shot NER preentrenamiento continuado MLM sobreajuste evaluación"},{"id":"hllm7l2","num":2,"lnum":2,"title":"Fine-tuning generativo y eficiente","href":"hllm7l2.html","kind":"lesson","search":"fine-tuning generativo SFT PEFT LoRA QLoRA cuantización adaptadores alineación RLHF DPO evaluación sobreajuste despliegue"},{"id":"hllm7l3","num":3,"lnum":3,"title":"Multimodalidad y sistemas en producción","href":"hllm7l3.html","kind":"lesson","search":"multimodal CLIP BLIP-2 visión lenguaje VLM embeddings imagen agentes LangChain herramientas orquestación producción coste seguridad evaluación"},{"id":"hllm7q","num":4,"lnum":4,"title":"Cierre del módulo 07","href":"hllm7q.html","kind":"quiz","search":"cierre fine-tuning encoder SetFit LoRA QLoRA alineación DPO multimodal CLIP BLIP-2 agentes producción evaluación"}]}]};</script>
+<script src="js/curso.js"></script>
+</body>
+</html>
